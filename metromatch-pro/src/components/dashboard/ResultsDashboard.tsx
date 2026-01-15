@@ -1,8 +1,7 @@
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { UserProfile, DatingMarketScore } from '../../types/user';
-import { TrendingUp, Award, Users, DollarSign, MapPin, Heart, Target, Zap } from 'lucide-react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts';
+import type { UserProfile, DatingMarketScore } from '../../types/user';
+import { Award, Heart, Target, Zap } from 'lucide-react';
 
 interface Props {
   userProfile: UserProfile;

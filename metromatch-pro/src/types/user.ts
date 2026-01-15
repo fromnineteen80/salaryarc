@@ -89,7 +89,7 @@ export interface PreferredPartner {
   ethnicities: Ethnicity[];  // Multi-select
   minEducation?: Education;  // Minimum education level
   hasKids: 'no_preference' | YesNo;
-  wantKids: WantKids[] | ['no_preference'];  // Multi-select
+  wantKids: (WantKids | 'no_preference')[];  // Multi-select
   smoking: 'no_preference' | YesNo;
 }
 

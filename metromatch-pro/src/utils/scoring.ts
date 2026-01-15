@@ -1,4 +1,4 @@
-import { MetroData, SearchFilters, MetroScore } from '../types';
+import type { MetroData, SearchFilters, MetroScore } from '../types';
 
 /**
  * Calculate purchasing power adjusted salary
@@ -97,7 +97,7 @@ export function scoreMetro(metro: MetroData, filters: SearchFilters): MetroScore
  * Rank metros by intelligent scoring
  */
 export function rankMetros(metros: Record<string, MetroData>, filters: SearchFilters): MetroScore[] {
-  const scored = Object.entries(metros).map(([name, data]) =>
+  const scored = Object.entries(metros).map(([_name, data]) =>
     scoreMetro(data, filters)
   );
 

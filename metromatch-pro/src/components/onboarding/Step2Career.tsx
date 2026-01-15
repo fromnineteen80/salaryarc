@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { CareerContext, AboutYou, Sector, Education, BodyType, WorkoutFrequency, PoliticalViews, YesNo, WantKids, RelationshipGoal } from '../../types/user';
+import type { CareerContext, AboutYou, Sector, Education, BodyType, WorkoutFrequency, PoliticalViews, YesNo, WantKids, RelationshipGoal } from '../../types/user';
 import { Briefcase, MapPin, DollarSign } from 'lucide-react';
 
 interface Props {

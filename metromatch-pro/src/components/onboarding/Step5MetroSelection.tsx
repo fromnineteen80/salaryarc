@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { RelocationTarget } from '../../types/user';
+import type { RelocationTarget } from '../../types/user';
 import { MapPin, Search, X, Target } from 'lucide-react';
 
 interface Props {

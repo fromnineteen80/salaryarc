@@ -1,5 +1,5 @@
-import { MetroData } from '../types';
-import { UserProfile, DatingMarketScore, BodyType, WorkoutFrequency } from '../types/user';
+import type { MetroData } from '../types';
+import type { UserProfile, DatingMarketScore, BodyType, WorkoutFrequency } from '../types/user';
 
 /**
  * DATING MARKET ENGINE
@@ -27,7 +27,8 @@ function getBodyTypeScore(bodyType: BodyType, metro: MetroData): number {
 }
 
 // Map workout frequency to fitness percentile
-function getWorkoutScore(frequency: WorkoutFrequency, metro: MetroData): number {
+// @ts-ignore - unused helper function
+function _getWorkoutScore(frequency: WorkoutFrequency, metro: MetroData): number {
   const mapping = {
     daily: metro.fitness_daily_cbsa,
     '4_6_days': metro.fitness_4_6_days_cbsa + metro.fitness_daily_cbsa,
@@ -174,11 +175,6 @@ function calculateMatchPoolSize(user: UserProfile, metro: MetroData): number {
   poolPct *= (isSeekingMen ? metro.gender_man_cbsa : metro.gender_woman_cbsa) / 100;
 
   // Factor in age range
-  const ageFields = [
-    'age_18_19_cbsa', 'age_20_24_cbsa', 'age_25_29_cbsa', 'age_30_34_cbsa',
-    'age_35_39_cbsa', 'age_40_44_cbsa', 'age_45_49_cbsa', 'age_50_54_cbsa',
-    'age_55_59_cbsa', 'age_60_64_cbsa', 'age_65_69_cbsa'
-  ];
 
   // Rough age filtering (this is simplified)
   if (prefs.ageMin >= 25 && prefs.ageMax <= 45) {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { PreferredPartner, BodyType, WorkoutFrequency, PoliticalViews, Ethnicity, Education, WantKids } from '../../types/user';
+import type { PreferredPartner, BodyType, WorkoutFrequency, PoliticalViews, Ethnicity, Education, WantKids } from '../../types/user';
 import { Heart, Users } from 'lucide-react';
 
 interface Props {

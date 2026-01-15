@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { IncomeHistoryRow, Education, YesNo } from '../../types/user';
+import type { IncomeHistoryRow, Education, YesNo } from '../../types/user';
 import { TrendingUp, Plus, Trash2 } from 'lucide-react';
 
 interface Props {

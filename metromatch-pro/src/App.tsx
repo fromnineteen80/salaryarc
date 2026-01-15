@@ -7,8 +7,8 @@ import Step3PartnerPrefs from './components/onboarding/Step3PartnerPrefs';
 import Step4IncomeHistory from './components/onboarding/Step4IncomeHistory';
 import Step5MetroSelection from './components/onboarding/Step5MetroSelection';
 import ResultsDashboard from './components/dashboard/ResultsDashboard';
-import { UserProfile, Demographics, CareerContext, AboutYou, PreferredPartner, IncomeHistoryRow, RelocationTarget } from './types/user';
-import { MetroData } from './types';
+import type { UserProfile, Demographics, CareerContext, AboutYou, PreferredPartner, IncomeHistoryRow, RelocationTarget } from './types/user';
+import type { MetroData } from './types';
 import { scoreAllMetros } from './utils/datingMarketEngine';
 
 // Import CBSA data
